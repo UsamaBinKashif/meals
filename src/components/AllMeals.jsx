@@ -91,7 +91,7 @@ const handleSelection = () =>{
     mealsList.map((meal) => (
       <div
         key={meal.id}
-        className="p-4 border rounded-lg shadow flex flex-col items-center"
+        className="p-4 border rounded-lg bg-white shadow flex flex-col items-center"
       >
         <img
           src={meal.image}
@@ -159,7 +159,7 @@ const handleSelection = () =>{
         </div>
       </div>
       {activeTab === "All meals" && (
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 px-32 gap-4">
+        <div className="grid grid-cols-1 bg-gradient-to-l from-blue/50 to-pink/50  md:grid-cols-2 lg:grid-cols-4 px-32 py-10 gap-4">
           {renderMeals(meals)}
         </div>
       )}
@@ -168,13 +168,13 @@ const handleSelection = () =>{
         activeTab === `Week ${index + 1}` ? (
           <div
             key={week}
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 px-32 gap-4"
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 px-32  h-screen gap-4 p-10 bg-gradient-to-l from-blue/50 to-pink/50 "
           >
             {weeks[week].length > 0 ? (
               weeks[week].map((meal) => (
                 <div
                   key={meal.id}
-                  className="p-4 border rounded-lg shadow flex flex-col items-center"
+                  className="p-4 border rounded-lg shadow flex flex-col items-center bg-white"
                 >
                   <img
                     src={meal.image}
