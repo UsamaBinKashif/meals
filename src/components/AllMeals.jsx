@@ -112,7 +112,7 @@ const handleSelection = () =>{
 
   return (
     <section>
-      <div className="flex flex-wrap justify-center items-center  lg:justify-around  lg:space-x-4 py-4 px-3 text-xs font-bold">
+      <div className="flex flex-wrap justify-center items-center  lg:justify-around  lg:space-x-4 py-10 px-3 text-xs font-bold">
         <div>
           <button onClick={() => setActiveTab("All meals")}>All Meals</button>
         </div>
@@ -122,8 +122,8 @@ const handleSelection = () =>{
               key={tab}
               onClick={() => setActiveTab(tab)}
               className={clsx(
-                "py-2 px-4 rounded mr-4",
-                activeTab === tab && "bg-blue-500"
+                "py-2 px-4 rounded m-4",
+                activeTab === tab && "border-b-2  border-blue text-blue"
               )}
             >
               {tab}
@@ -132,7 +132,7 @@ const handleSelection = () =>{
         </div>
         <div>
           <button
-            className={clsx("py-2 px-10 rounded bg-gray-200",showWeekSelection && selectedMeals.length > 0 && "hidden")}
+            className={clsx("py-2 px-10 rounded bg-gray-400 text-white",showWeekSelection && selectedMeals.length > 0 && "hidden")}
             onClick={handleSelection}
           >
             Add to Week
